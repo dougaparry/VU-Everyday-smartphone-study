@@ -86,4 +86,237 @@
     .lead {
       font-size: 1.13rem;
       max-width: 66ch;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--accent);
+      border-color: var(--border);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .stat {
+      background: #f9fbfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.25rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .section {
+      padding: 18px 0 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    ul, ol {
+      margin: 10px 0 0 1.2rem;
+      padding: 0;
+      color: var(--text);
+    }
+
+    li { margin-bottom: 10px; }
+
+    .small {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .notice {
+      border-left: 4px solid var(--accent-2);
+      background: #f2fbfa;
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: var(--text);
+      margin-top: 14px;
+    }
+
+    .footer {
+      padding: 28px 0 56px;
+    }
+
+    .footer p {
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-card, .card { padding: 24px; }
+      .span-6, .span-4, .span-8 { grid-column: span 12; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <div>
+          <span class="eyebrow">VU Amsterdam research study</span>
+          <h1>Android user at VU Amsterdam? Earn up to €97.50.</h1>
+          <p class="lead">We are recruiting participants for a 14-day study on everyday smartphone use and attention at Vrije Universiteit Amsterdam.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://vu-vbl.sona-systems.com/Default.aspx?ReturnUrl=%2fexp_info.aspx%3fexperiment_id%3d72&experiment_id=72" target="_blank" rel="noopener noreferrer">Sign up via SONA</a>
+            <a class="btn btn-secondary" href="https://vbl.labs.vu.nl/student" target="_blank" rel="noopener noreferrer">Join the VU student pool first</a>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>Up to €97.50</strong>
+            <span class="small">Including additional bonuses</span>
+          </div>
+          <div class="stat">
+            <strong>14 days</strong>
+            <span class="small">Phone check-ins and background logging</span>
+          </div>
+          <div class="stat">
+            <strong>2 lab visits</strong>
+            <span class="small">About 1 hour and 45 minutes in total</span>
+          </div>
+          <div class="stat">
+            <strong>Android only</strong>
+            <span class="small">The study app currently runs on Android devices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap grid">
+        <div class="card span-8">
+          <h2>What does participation involve?</h2>
+          <ul>
+            <li><strong>Two short lab sessions</strong> at the Applied Behavioural Science Lab in the Transitorium Building at VU Amsterdam.</li>
+            <li><strong>Five brief daily surveys</strong> on your phone during the 14-day study period. Each survey takes about 1 to 2 minutes.</li>
+            <li><strong>A research app</strong> that logs when you use your phone. The app records app names and timestamps only. It does <strong>not</strong> collect message content or other personal content from your phone.</li>
+          </ul>
+          <div class="notice">
+            This study is designed to understand everyday smartphone use and attention. Participation is flexible over the coming months, depending on available session times.
+          </div>
+        </div>
+
+        <div class="card span-4">
+          <h2>At a glance</h2>
+          <p><strong>Who can take part?</strong><br />VU Amsterdam participants with an Android phone.</p>
+          <p><strong>Where?</strong><br />Applied Behavioural Science Lab, Transitorium Building, VU Amsterdam.</p>
+          <p><strong>When?</strong><br />Flexible scheduling over the coming months. Current times are listed in SONA.</p>
+          <p><strong>Compensation?</strong><br />Up to €97.50, including additional bonuses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid">
+        <div class="card span-6">
+          <h2>How to sign up</h2>
+          <ol>
+            <li>If you already use the VU Behavioural Lab participation system, go straight to the study page on SONA.</li>
+            <li>If you are new to the system, first join the VU student pool.</li>
+            <li>Choose a study slot that fits your schedule.</li>
+          </ol>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://vu-vbl.sona-systems.com/Default.aspx?ReturnUrl=%2fexp_info.aspx%3fexperiment_id%3d72&experiment_id=72" target="_blank" rel="noopener noreferrer">Open the study in SONA</a>
+            <a class="btn btn-secondary" href="https://vbl.labs.vu.nl/student" target="_blank" rel="noopener noreferrer">Create a participant account</a>
+          </div>
+        </div>
+
+        <div class="card span-6">
+          <h2>Need a different time?</h2>
+          <p>If you would like to participate but the listed times do not work for you, email <a href="mailto:d.a.parry@vu.nl">d.a.parry@vu.nl</a> and we will try to arrange an alternative slot.</p>
+          <p class="small">You are also welcome to share this study with other VU students who may be interested.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid">
+        <div class="card span-12">
+          <h2>Frequently asked questions</h2>
+          <div class="grid">
+            <div class="span-6">
+              <h3>Why is the study Android only?</h3>
+              <p>The research app currently runs on Android devices, which is why participation is limited to Android users.</p>
+
+              <h3>What phone data are collected?</h3>
+              <p>The app logs app names and times of use. It does not collect message content, photos, typed text, or other personal content.</p>
+            </div>
+            <div class="span-6">
+              <h3>How much time does it take each day?</h3>
+              <p>The daily surveys are brief. Across the day they take roughly 5 to 10 minutes in total.</p>
+
+              <h3>How much can I earn?</h3>
+              <p>You can earn up to €97.50 in total, including bonus payments linked to participation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap card">
+      <h2>Contact</h2>
+      <p>Study contact: <a href="mailto:d.a.parry@vu.nl">Dr Doug Parry</a></p>
+      <p>For more information about the VU Behavioural Lab, visit the VBL website or contact <a href="mailto:vbl@vu.nl">vbl@vu.nl</a>.</p>
+      <p class="small">This page is intended to provide a simple overview of the study and how to participate.</p>
+    </div>
+  </footer>
+</body>
 </html>
